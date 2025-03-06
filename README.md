@@ -55,5 +55,6 @@
 
 ```bash
 source ~/rbpodo_ros2_ws/install/setup.bash
-ros2 launch rbpodo_bringup rbpodo.launch.py model_id:=rb3_730es_u use_rviz:=true
+ros2 launch rbpodo_bringup rbpodo.launch.py model_id:=rb3_730es_u use_rviz:=true//Joint publisher, discription만 실행함.
+ros2 launch rb3_730es_u_moveit_config moveit.launch.py //Moveit까지 실행하여 모션플랜이 가능한 소스
 ```
