@@ -1,4 +1,4 @@
-# rbpodo_ros2
+![image](https://github.com/user-attachments/assets/3f5d2f49-30c4-4654-9768-5f32dfc354e6)# rbpodo_ros2
 
 > :warning: **IMPORTANT WARNING**: This software is under active development. DO NOT USE in production to avoid potential instability.
 
@@ -59,7 +59,7 @@ ros2 launch rbpodo_bringup rbpodo.launch.py model_id:=rb3_730es_u use_rviz:=true
 ros2 launch rb3_730es_u_moveit_config moveit.launch.py //Moveit까지 실행하여 모션플랜이 가능한 소스
 ```
 
-## ROS2 MoveIt Launch 파일 설명
+## moveit.launch.py 파일 설명
 이 프로젝트는 ROS2에서 MoveIt을 사용하여 로봇을 제어하고 RViz로 시각화하는 데 필요한 런치 파일을 설정하는 코드입니다. </br>주요 기능은 로봇 상태를 퍼블리시하고, 경로 계획을 수행하며, RViz에서 로봇을 시각화하는 것입니다. </br>이 파일은 ROS2 환경에서 로봇을 제어하고 테스트할 때 사용할 수 있습니다.
 
 ## 주요 구성 요소
@@ -96,3 +96,21 @@ rviz_config 인수는 RViz의 설정 파일을 지정합니다.</br> 기본값�
 
 ### 사용 방법
 이 런치 파일은 ROS2 환경에서 roslaunch 명령을 통해 실행할 수 있습니다. RViz 설정을 변경하려면, rviz_config 인수를 사용하여 원하는 설정 파일을 지정할 수 있습니다.
+
+## 컴퓨터 ip 변경방법(ubuntu)
+
+1. 유선 연결됨 → 유선 네트워크 설정
+![image](https://github.com/user-attachments/assets/2f7aed2c-1842-4236-8d0f-df8928d3d8d2)
+
+2. '유선'의 톱니바퀴 클릭 → IPv4
+![image](https://github.com/user-attachments/assets/1bb18e70-f40b-4877-8636-7b1701a6b034)
+
+3. 자동(DHCP)에 체크 되어 있는 걸 다음 사진처럼 변경 → 적용 누르고 재 시동
+![image](https://github.com/user-attachments/assets/acd72eaa-8ef7-43c9-84f1-3bf669d6ad3b)
+
+주소 - 10.0.2.xx (xx는 7과 1을 제외한 숫자를 입력, 7은 로봇ip주소이며 1은 게이트웨이임)</br>
+서브넷마스크 -255.255.255.0</br>
+게이트웨이 - 10.0.2.1</br>
+네임서버 - 8.8.8.8</br>
+4-1. 다시 톱니바퀴 들어가서 확인해 보면 내가 설정한 IP주소로 바뀌어 있는 것 확인 가능
+4-2. 다음 명령어 입력 후 inet 주소가 설정한 고정IP로 잘 바뀌어 있는지 확인
