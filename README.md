@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3f5d2f49-30c4-4654-9768-5f32dfc354e6)# rbpodo_ros2
+# rbpodo_ros2
 
 > :warning: **IMPORTANT WARNING**: This software is under active development. DO NOT USE in production to avoid potential instability.
 
